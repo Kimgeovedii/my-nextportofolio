@@ -37,8 +37,8 @@ const projects = [
   {
     title: "Website Portofolio Project",
     image: "/img/portofolio.png",
-    demo: "https://kim-geovedi.github.io/my-portofolio/src/",
-    github: "https://github.com/kim-geovedi/my-portofolio",
+    demo: "https://kimgeovedi-porto.vercel.app/",
+    github: "https://github.com/Kimgeovedii/my-nextportofolio",
   },
   {
     title: "Real Estate Regency Website",
