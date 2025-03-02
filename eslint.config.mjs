@@ -12,3 +12,9 @@ const compat = new FlatCompat({
 const eslintConfig = [...compat.extends("next/core-web-vitals")];
 
 export default eslintConfig;
+module.exports = {
+  extends: ["next/core-web-vitals"],
+  rules: {
+    "import/no-anonymous-default-export": "off", // Menonaktifkan aturan ini
+  },
+};
