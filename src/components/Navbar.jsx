@@ -46,7 +46,7 @@ export default function Navbar() {
                 isMenuOpen ? "hamburger-active" : ""
               }`}
               onClick={() => setIsMenuOpen(!isMenuOpen)}>
-              <span className="hamburger-line transition duration-300 ease-in-out origin-top-left"></span>
+              <span className="hamburger-line text-sm transition duration-300 ease-in-out origin-top-left"></span>
               <span className="hamburger-line transition duration-300 ease-in-out"></span>
               <span className="hamburger-line transition duration-300 ease-in-out origin-bottom-left"></span>
             </button>
