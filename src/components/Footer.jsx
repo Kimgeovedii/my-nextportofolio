@@ -33,7 +33,7 @@ export default function Footer() {
               </Link>
             </div>
             <p className="font-medium text-sm text-slate-500 text-center mb-3">
-              © 2024 Created by Kim Geovedi. All rights reserved.
+              © 2025 Created by Kim Geovedi. All rights reserved.
             </p>
           </div>
         </div>
