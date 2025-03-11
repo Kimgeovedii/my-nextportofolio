@@ -1,7 +1,23 @@
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 export default function Contact() {
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      AOS.init({
+        easing: "ease-in-out",
+        duration: 300,
+        delay: 0,
+      });
+    }
+  });
   return (
     <div>
-      <section id="contact" className="pt-36 pb-16 bg-transparent">
+      <section
+        id="contact"
+        className="pt-36 pb-16 bg-transparent"
+        data-aos="fade-up">
         <div className="container">
           <div className="w-full px-4">
             <div className="max-w-xl mx-auto text-center mb-16">

@@ -2,6 +2,9 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const projects = [
   {
@@ -49,10 +52,19 @@ const projects = [
 ];
 
 export default function Portfolio() {
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      AOS.init({
+        easing: "ease-in-out",
+        duration: 300,
+        delay: 0,
+      });
+    }
+  }, []);
   return (
     <section id="portfolio" className="pt-36 pb-16 bg-transparent">
       <div className="container mx-auto px-4">
-        <div className="max-w-xl mx-auto text-center mb-16">
+        <div className="max-w-xl mx-auto text-center mb-16" data-aos="fade-up">
           <h4 className="font-semibold text-lg text-primary">Portofolio</h4>
           <h2 className="font-bold text-tulisan text-3xl sm:text-4xl lg:text-5xl">
             This Is My Portfolio
@@ -61,6 +73,7 @@ export default function Portfolio() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((project, index) => (
             <div
+              data-aos="flip-left"
               key={index}
               className="bg-white rounded-xl shadow-lg overflow-hidden">
               <Image

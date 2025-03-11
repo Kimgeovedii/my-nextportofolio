@@ -1,13 +1,29 @@
-import Link from "next/link";
+// components/About.js
 
+"use client";
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import Link from "next/link";
 import { Instagram, Github } from "lucide-react";
+
 export default function About() {
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      AOS.init({
+        easing: "ease-in-out",
+        duration: 300,
+        delay: 0,
+      });
+    }
+  }, []);
+
   return (
     <div>
       <section id="about" className="pt-36 pb-32">
         <div className="container">
           <div className="flex flex-wrap">
-            <div className="w-full mb-10 px-4 lg:w-1/2">
+            <div className="w-full mb-10 px-4 lg:w-1/2" data-aos="fade-right">
               <h4 className="font-bold uppercase text-primary text-lg mb-3">
                 About Me
               </h4>
@@ -27,7 +43,7 @@ export default function About() {
                 (PTPN Group).
               </p>
             </div>
-            <div className="w-full px-4 lg:w-1/2">
+            <div className="w-full px-4 lg:w-1/2" data-aos="fade-left">
               <h3 className="font-semi-bold text-tulisan text-base mb-6 lg:text-3xl lg:pt-10">
                 Let's Collaborate
               </h3>

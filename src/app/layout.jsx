@@ -1,7 +1,6 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import "./styles.css"; // Tambahkan ini untuk styles.css
-import Head from "next/head";
+import "./styles.css"; // Pastikan file styles.css ada di folder yang benar
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -21,14 +20,19 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className="scroll-smooth">
-      <Head>
+      <head>
         <title>{metadata.title}</title>
         <meta name="description" content={metadata.description} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-      </Head>
+        <link
+          rel="stylesheet"
+          href="https://unpkg.com/aos@2.3.1/dist/aos.css"
+        />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} bg-dark antialiased`}>
         {children}
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" async></script>
       </body>
     </html>
   );
