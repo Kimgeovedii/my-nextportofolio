@@ -12,7 +12,7 @@ export default function Jumbotron() {
                 </span>
               </h1>
               <h2 className="font-medium text-lg mb-5 text-tulisan lg:text-2xl">
-                Web Developer |{" "}
+                Software Engineer |{" "}
                 <span className="text-primary">Data Analyst</span>
               </h2>
               <p className="font-medium mb-10 text-paragraf leading-relaxed">
@@ -26,11 +26,20 @@ export default function Jumbotron() {
             </div>
             <div className="w-full self-end px-4 lg:w-1/2">
               <div className="relative mt-10 lg:mt-9 lg:right-0">
-                <img
-                  src="img/profile.png"
-                  alt="Profile of Kim Geovedi"
-                  className="max-w-full mx-auto"
-                />
+                <div className="relative w-full max-w-md mx-auto">
+                  <img
+                    src="img/new.png"
+                    alt="Profile of Kim Geovedi"
+                    className="max-w-full mx-auto"
+                  />
+                  {/* Gradasi bagian bawah */}
+                  <div
+                    className="absolute bottom-0 left-0 right-0 h-24 
+                  bg-gradient-to-t from-white to-transparent 
+                  dark:from-[#0f172a] pointer-events-none"
+                  />
+                </div>
+
                 <span className="absolute -top-0 -z-10 left-1/2 -translate-x-1/2 md:scale-125">
                   <svg
                     width="400"
